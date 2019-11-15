@@ -1,20 +1,6 @@
 require 'spec_helper'
 
 RSpec.describe Vufer::Configure do
-  context 'when loading defaults keys' do
-    before do
-      Vufer.use_defaults
-    end
-
-    it 'the access key is empty' do
-      expect(Vufer.access_key).to eq ''
-    end
-
-    it 'the secret key is empty' do
-      expect(Vufer.secret_key).to eq ''
-    end
-  end
-
   context 'when configuring the vufer with new keys' do
     before do
       Vufer.configure do |config|
