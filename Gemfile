@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gemspec
 
+gem 'faraday'
+
 group :test do
   gem 'pry'
   gem 'vcr'
