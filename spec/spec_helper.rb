@@ -1,4 +1,5 @@
 require 'bundler/setup'
+require 'pry'
 require 'vufer'
 
 Dir[File.join(__dir__, 'spec', 'support', '**', '*.rb')].each { |f| require f }

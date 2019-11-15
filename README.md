@@ -20,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Configure your access and secret keys from Vuforia.
+
+```ruby
+Vufer.configure do |config|
+  config.access_key = 'MY_ACCESS_KEY'
+  config.secret_key = 'MY_SECRET_KEY'
+end
+```
+
+If you have `VWS_ACCESS_KEY` and `VWS_SECRET_KEY` set in your environment, Vufer will try to get these keys from the environment.
 
 ## Development
 
