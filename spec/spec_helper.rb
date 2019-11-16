@@ -1,8 +1,11 @@
 require 'bundler/setup'
 require 'pry'
+require 'time'
 require 'vufer'
 
-Dir[File.join(__dir__, 'spec', 'support', '**', '*.rb')].each { |f| require f }
+require 'support/vcr'
+
+# Dir[File.join(__dir__, 'spec', 'support', '**', '*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.example_status_persistence_file_path = '.rspec_status'

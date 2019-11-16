@@ -19,11 +19,6 @@ RSpec.describe Vufer::Configure do
   end
 
   context 'when loading from environment variable' do
-    before do
-      ENV['VWS_ACCESS_KEY'] = '4cc3s'
-      ENV['VWS_SECRET_KEY'] = 's3cr3t'
-    end
-
     it 'the access key is not empty' do
       expect(Vufer.access_key).to eq '4cc3s'
     end

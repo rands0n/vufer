@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vws.vuforia.com/targets/8c6f38cd1a084adf92aad3541c83db37
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Date:
+      - Sat, 16 Nov 2019 11:25:02 GMT
+      Authorization:
+      - VWS 08c287c74b2790f43efca48da482981f9f89aecd:rxZsocES9kt/bF1UFYzwyvF7V0o=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 16 Nov 2019 11:25:03 GMT
+      Server:
+      - nginx
+      Content-Length:
+      - '255'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result_code":"Success","transaction_id":"40891d0e69d54a21b0f43c964cbab36f","target_record":{"target_id":"8c6f38cd1a084adf92aad3541c83db37","active_flag":true,"name":"LogoComFundoClaro","width":50,"tracking_rating":0,"reco_rating":""},"status":"success"}'
+    http_version: 
+  recorded_at: Sat, 16 Nov 2019 11:25:03 GMT
+recorded_with: VCR 5.0.0
