@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    command: bin/console
+    volumes:
+      - ./:/app
+      - bundle_path:/bundle
+    environment:
+      - BUNDLE_PATH=/bundle
+    tty: true
+    stdin_open: true
+
+volumes:
+  bundle_path:
