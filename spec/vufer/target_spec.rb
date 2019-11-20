@@ -63,4 +63,33 @@ RSpec.describe Vufer::Target do
       end
     end
   end
+
+  describe '#create' do
+    before do
+      Vufer.access_key = ENV['VWS_ACCESS_KEY']
+      Vufer.secret_key = ENV['VWS_SECRET_KEY']
+    end
+
+    it 'returns http status success' do
+      VCR.use_cassette('targets/create') do
+        target = Vufer::Target.create(
+          'Target Name Test',
+          'https://cms-assets.tutsplus.com/uploads/users/34/posts/28744/preview_image/vuforia.jpg'
+        )
+
+        expect(target['result_code']).to eq 'TargetCreated'
+      end
+    end
+
+    it 'includes the target_id on the response' do
+      VCR.use_cassette('targets/create') do
+        target = Vufer::Target.create(
+          'Target Name Test',
+          'https://cms-assets.tutsplus.com/uploads/users/34/posts/28744/preview_image/vuforia.jpg'
+        )
+
+        expect(target['target_id']).to eq '2097ce564b7248038b2565671f3f9a1a'
+      end
+    end
+  end
 end
