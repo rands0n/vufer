@@ -1,3 +1,7 @@
+# v0.3.1
+
+- Create `Vufer::Target.all` method to load all ids from Vuforia associated with the server key.
+
 # v0.2.1
 
 - Create `Vufer.summary` to load info about targets, quota, requests, etc.. from Vuforia.
