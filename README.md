@@ -1,4 +1,4 @@
-# Vufer
+# Vufer [![Build Status](https://travis-ci.org/rands0n/vufer.svg?branch=master)](https://travis-ci.org/rands0n/vufer)
 
 A Ruby Gem to Interact with Vuforia Web Service API
 
