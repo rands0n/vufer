@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vws.vuforia.com/targets
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Date:
+      - Wed, 20 Nov 2019 22:51:15 GMT
+      Authorization:
+      - VWS 08c287c74b2790f43efca48da482981f9f89aecd:5qhdTBadav2+IdJ9pDwfnby8bw4=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 20 Nov 2019 22:51:17 GMT
+      Server:
+      - nginx
+      Content-Length:
+      - '579'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result_code":"Success","transaction_id":"426f60669af74660a0fbcf2d39d50119","results":["8c6f38cd1a084adf92aad3541c83db37","bab51c2322ee40819aa932491477e97b"]}'
+    http_version:
+  recorded_at: Wed, 20 Nov 2019 22:51:17 GMT
+recorded_with: VCR 5.0.0
