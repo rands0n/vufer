@@ -8,6 +8,7 @@ group :test do
   gem 'pry'
   gem 'vcr'
   gem 'webmock'
+  gem 'rake'
 end
 
 group :coverage do
