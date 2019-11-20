@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://vws.vuforia.com/summary
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Date:
+      - Wed, 20 Nov 2019 19:10:33 GMT
+      Authorization:
+      - VWS 08c287c74b2790f43efca48da482981f9f89aecd:SiYCLSxgh2GUq2g63MlXTbzkAkw=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 20 Nov 2019 19:10:35 GMT
+      Server:
+      - nginx
+      Content-Length:
+      - '319'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"name":"Arpia","result_code":"Success","transaction_id":"7f141566c23643c28481dfedacf8c737","active_images":14,"inactive_images":0,"failed_images":0,"processing_images":0,"target_quota":1000,"request_quota":100000,"reco_threshold":1000,"request_usage":0,"total_recos":0,"current_month_recos":0,"previous_month_recos":0}'
+    http_version: 
+  recorded_at: Wed, 20 Nov 2019 19:10:34 GMT
+recorded_with: VCR 5.0.0
