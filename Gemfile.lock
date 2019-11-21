@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vufer (0.5.1)
+    vufer (1.0.0)
 
 GEM
   remote: https://rubygems.org/

@@ -1,3 +1,8 @@
+# v1.0.0
+
+- Create `Vufer::Target.dups` to view duplated related targets.
+- Create `Vufer::Target.summary` to get a summary of a target.
+
 # v0.5.1
 
 - Create `Vufer::Target.destroy` to delete a specific target on the database.
