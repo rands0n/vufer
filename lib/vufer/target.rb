@@ -9,7 +9,7 @@ module Vufer
       ##
       # Find a specific target on Vuforia Web Services API.
       #
-      # @param [String] the identifier that exists on Vuforia.
+      # @param ID [String] The identifier that exists on Vuforia.
       #
       # @return [JSON] the object parsed in JSON from Vuforia.
       def find(id)
@@ -47,11 +47,11 @@ module Vufer
       ##
       # Creates a new target on Vuforia Web Services API.
       #
-      # @param [String] The name of the image to create
-      # @param [String] Contains the base64 encoded binary recognition image data
-      # @param [Fixnum] Width of the target in scene unit
-      # @param [Boolean] Indicates whether or not the target is active for query, default: false
-      # @param [Hash] The base64 encoded application metadata associated with the target
+      # @param Name [String] The name of the image to create
+      # @param FileURL [String] Contains the base64 encoded binary recognition image data
+      # @param Width [Fixnum] Width of the target in scene unit
+      # @param ActiveFlag [Boolean] Indicates whether or not the target is active for query, default: false
+      # @param Metadata [Hash] The base64 encoded application metadata associated with the target
       #
       # @return [JSON] A newly target id from Vuforia.
       def create(name, file_path, width = 50.0, active_flag = false, metadata = nil)
@@ -83,12 +83,12 @@ module Vufer
       ##
       # Performs an update for a specific target on the database.
       #
-      # @param [String] The ID(identifier) of the target on Vuforia.
-      # @param [String] The name of the image to create
-      # @param [String] Contains the base64 encoded binary recognition image data
-      # @param [Fixnum] Width of the target in scene unit
-      # @param [Boolean] Indicates whether or not the target is active for query
-      # @param [Hash] The base64 encoded application metadata associated with the target
+      # @param ID [String] The ID(identifier) of the target on Vuforia.
+      # @param Name [String] The name of the image to create
+      # @param FileURL [String] Contains the base64 encoded binary recognition image data
+      # @param Width [Fixnum] Width of the target in scene unit
+      # @param ActiveFlag [Boolean] Indicates whether or not the target is active for query
+      # @param Metadata [Hash] The base64 encoded application metadata associated with the target
       #
       # @return [JSON] A info showing success that the target was updated.
       def update(id, name = nil, file_path = nil, width = nil, active_flag = nil, metadata = nil)
@@ -121,7 +121,7 @@ module Vufer
       #
       # Note: Targets in a processing status cannot be deleted.
       #
-      # @param [String] The ID(identifier) of the target on the database.
+      # @param ID [String] The ID(identifier) of the target on the database.
       #
       # @return [JSON] The result code and transaction id indicating the update was ok.
       def destroy(id)
