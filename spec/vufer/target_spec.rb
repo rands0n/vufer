@@ -92,4 +92,22 @@ RSpec.describe Vufer::Target do
       end
     end
   end
+
+  describe '#update' do
+    before do
+      Vufer.access_key = ENV['VWS_ACCESS_KEY']
+      Vufer.secret_key = ENV['VWS_SECRET_KEY']
+    end
+
+    it 'returns http status success' do
+      VCR.use_cassette('targets/update') do
+        target = Vufer::Target.update(
+          '2097ce564b7248038b2565671f3f9a1a',
+          'New name'
+        )
+
+        expect(target['result_code']).to eq 'Success'
+      end
+    end
+  end
 end
