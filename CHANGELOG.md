@@ -1,3 +1,8 @@
+# v0.4.1
+
+- Create `Vufer::Target.create` method to add a new target on the database.
+- Create `Vufer::Target.update` to update a created target on the database.
+
 # v0.3.1
 
 - Create `Vufer::Target.all` method to load all ids from Vuforia associated with the server key.
