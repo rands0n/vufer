@@ -148,4 +148,33 @@ RSpec.describe Vufer::Target do
       end
     end
   end
+
+  describe '#summary' do
+    before do
+      Vufer.access_key = ENV['VWS_ACCESS_KEY']
+      Vufer.secret_key = ENV['VWS_SECRET_KEY']
+    end
+
+    it 'returns http status success' do
+      VCR.use_cassette('targets/summary') do
+        target = Vufer::Target.summary('ffeec4fb1276440db68b73f815356f3e')
+
+        expect(target['status']).to eq 'success'
+      end
+    end
+
+    %w[
+      database_name target_name upload_date
+      active_flag tracking_rating
+      current_month_recos previous_month_recos
+    ].each do |att|
+      it "includes attribute #{att}" do
+        VCR.use_cassette('targets/summary') do
+          target = Vufer::Target.summary('ffeec4fb1276440db68b73f815356f3e')
+
+          expect(target).to include att
+        end
+      end
+    end
+  end
 end

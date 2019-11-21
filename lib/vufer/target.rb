@@ -157,6 +157,26 @@ module Vufer
       rescue StandardError =>
         e.message
       end
+
+      ##
+      # Load a summary of a specific target on the database.
+      #
+      # @param ID [String] The identifier of the target on database.
+      #
+      # @return [JSON] All the info about database and target.
+      def summary(id)
+        time = Time.now.httpdate
+        signature = Vufer::Signature.generate("/summary/#{id}", nil, 'GET', time)
+
+        res = Faraday.get("#{Vufer::BASE_URI}/summary/#{id}", {}, {
+          Date: time,
+          Authorization: "VWS #{Vufer.access_key}:#{signature}"
+        })
+
+        JSON.parse(res.body)
+      rescue StandardError =>
+        e.message
+      end
     end
   end
 end
