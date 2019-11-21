@@ -115,6 +115,28 @@ module Vufer
       rescue StandardError => e
         e.message
       end
+
+      ##
+      # Deletes a specific targets from the database.
+      #
+      # Note: Targets in a processing status cannot be deleted.
+      #
+      # @param [String] The ID(identifier) of the target on the database.
+      #
+      # @return [JSON] The result code and transaction id indicating the update was ok.
+      def destroy(id)
+        time = Time.now.httpdate
+        signature = Vufer::Signature.generate("/targets/#{id}", nil, 'DELETE', time)
+
+        res = Faraday.delete("#{Vufer::BASE_URI}/targets/#{id}", {}, {
+          Date: time,
+          Authorization: "VWS #{Vufer.access_key}:#{signature}"
+        })
+
+        JSON.parse(res.body)
+      rescue StandardError => e
+        e.message
+      end
     end
   end
 end

@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://vws.vuforia.com/targets/2097ce564b7248038b2565671f3f9a1a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Date:
+      - Thu, 21 Nov 2019 00:32:45 GMT
+      Authorization:
+      - VWS 08c287c74b2790f43efca48da482981f9f89aecd:hcHfR2o26zgbb2ARCDuu2OVQCZ4=
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 21 Nov 2019 00:32:47 GMT
+      Server:
+      - nginx
+      Content-Length:
+      - '77'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"result_code":"Success","transaction_id":"3fdec476233146d39b1a6c971721f559"}'
+    http_version: 
+  recorded_at: Thu, 21 Nov 2019 00:32:47 GMT
+recorded_with: VCR 5.0.0
