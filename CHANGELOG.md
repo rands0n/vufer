@@ -1,3 +1,7 @@
+# v0.5.1
+
+- Create `Vufer::Target.destroy` to delete a specific target on the database.
+
 # v0.4.1
 
 - Create `Vufer::Target.create` method to add a new target on the database.
