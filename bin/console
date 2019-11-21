@@ -4,4 +4,7 @@ require 'bundler/setup'
 require 'pry'
 require 'vufer'
 
+Vufer.access_key = ENV['VWS_ACCESS_KEY']
+Vufer.secret_key = ENV['VWS_SECRET_KEY']
+
 Pry.start

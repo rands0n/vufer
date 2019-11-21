@@ -137,6 +137,26 @@ module Vufer
       rescue StandardError => e
         e.message
       end
+
+      ##
+      # Review all duplicates targets from the database.
+      #
+      # @param ID [String] The identifier of the target on database.
+      #
+      # @return [JSON] An Array of ids of similar targets
+      def dups(id)
+        time = Time.now.httpdate
+        signature = Vufer::Signature.generate("/duplicates/#{id}", nil, 'GET', time)
+
+        res = Faraday.get("#{Vufer::BASE_URI}/duplicates/#{id}", {}, {
+          Date: time,
+          Authorization: "VWS #{Vufer.access_key}:#{signature}"
+        })
+
+        JSON.parse(res.body)
+      rescue StandardError =>
+        e.message
+      end
     end
   end
 end
