@@ -2,7 +2,7 @@
   <img alt="Vufer logo" width="200" src="https://s3.amazonaws.com/arpia.pro/images/arpia-logo-rounded.png">
 </p>
 
-# Vufer [![Build Status](https://travis-ci.org/rands0n/vufer.svg?branch=master)](https://travis-ci.org/rands0n/vufer)
+# Vufer [![Build Status](https://travis-ci.org/rands0n/vufer.svg?branch=master)](https://travis-ci.org/rands0n/vufer) [![Gem Version](https://badge.fury.io/rb/vufer.svg)](https://badge.fury.io/rb/vufer)
 
 A Ruby Gem to Interact with Vuforia Web Service API.
 
