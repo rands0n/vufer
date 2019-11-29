@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vufer (1.0.0)
+    vufer (1.0.1)
       faraday (~> 0.17.0)
 
 GEM

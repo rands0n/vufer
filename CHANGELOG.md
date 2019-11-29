@@ -1,3 +1,7 @@
+# v1.0.1
+
+- Include dependency of Faraday in gemspec and removes from Gemfile.
+
 # v1.0.0
 
 - Create `Vufer::Target.dups` to view duplated related targets.
