@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     vufer (1.0.0)
+      faraday (~> 0.17.0)
 
 GEM
   remote: https://rubygems.org/
@@ -69,7 +70,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  faraday
   pry
   rake
   rspec (~> 3.0)
