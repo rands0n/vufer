@@ -12,3 +12,6 @@
 
 # remove .env files for access and secret keys
 .env
+
+# Exclude Mac .DS_Store files
+.DS_Store
