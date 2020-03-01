@@ -6,7 +6,7 @@ group :test do
   gem 'pry'
   gem 'vcr'
   gem 'webmock'
-  gem 'rake'
+  gem 'rake', '>= 12.3.3'
 end
 
 group :coverage do
