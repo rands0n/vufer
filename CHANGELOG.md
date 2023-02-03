@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Update rake development version
+
 # 1.0.2
 
 * Update to ruby 3 and fix some CI issues
