@@ -1,3 +1,7 @@
+# 1.0.2
+
+* Update to ruby 3 and fix some CI issues
+
 # v1.0.1
 
 - Include dependency of Faraday in gemspec and removes from Gemfile.
