@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Vufer logo" src="https://user-images.githubusercontent.com/4191734/216976310-1ca96a23-e166-4dfc-9959-6dabae9a26c5.png">
+  <img alt="Vufer logo" src="https://user-images.githubusercontent.com/4191734/217097257-c91dbb0b-9be2-4f05-bf11-89ecedf19280.png">
 </p>
 
 # Vufer [![Build Status](https://travis-ci.org/rands0n/vufer.svg?branch=master)](https://travis-ci.org/rands0n/vufer) [![Gem Version](https://badge.fury.io/rb/vufer.svg)](https://badge.fury.io/rb/vufer)
